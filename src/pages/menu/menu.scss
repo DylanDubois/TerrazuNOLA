@@ -1,0 +1,55 @@
+page-menu {
+
+    .header .header-ios {
+        background: color($colors, primary);
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+    .toolbar-title {
+        color: color($colors, primary);
+    }
+
+    ion-segment {
+        height: 3rem;
+        margin: 0px;
+        position: fixed;
+        color: purple;
+    }
+
+    .selected-menu-tab {
+        margin-top: 4.5rem;
+    }
+
+    .segment-ios .segment-button {
+        color: color($colors, primary);
+        background-color: white;
+    }
+
+    .overflow{
+        overflow-wrap: break-word;
+        white-space: normal;
+        color: gray;
+
+        p {
+            margin: 1em 0 1em 0;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+    }
+    h6 {
+        margin: 0;
+        color: color($colors, primary);
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+    .list-item {
+        border-bottom: 0.55px solid color($colors, primary);
+        padding: 0 12px 0 12px;
+
+        h5 {
+            margin: .5em 0 .5em 0;
+            font-weight: 500;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        
+    }
+}
