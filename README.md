@@ -1,5 +1,3 @@
-# TerrazaNOLA
-
 ## Screenshots
 **Menu**
 
