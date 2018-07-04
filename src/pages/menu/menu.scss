@@ -6,13 +6,24 @@ page-menu {
 
     .toolbar-title {
         color: color($colors, primary);
+        text-align: center;
     }
 
     ion-segment {
         height: 3rem;
         margin: 0px;
         position: fixed;
-        color: purple;
+
+    }
+
+    .content-md{
+        .segment-md {
+            height: 4rem;
+        }
+
+        .header-grid h6{
+            padding-top: 10px;
+        }
     }
 
 
@@ -46,7 +57,7 @@ page-menu {
 
         h5 {
             margin: .5em 0 .5em 0;
-            font-weight: 500;
+            font-weight: 300;
             font-family: Verdana, Geneva, sans-serif;         
         }
         
@@ -56,10 +67,18 @@ page-menu {
         border-bottom: 0.55px solid color($colors, primary);
         h6 {
             font-size: 2em;
+            padding-top: 3px;
         }
 
         button {
             font-size: .75em;
+            width: 100%;
         }
+    }
+
+    ul {
+        margin: 2px;
+        list-style-type: none;
+        padding: 12px;
     }
 }
