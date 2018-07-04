@@ -1,8 +1,4 @@
-page-home {
-
-    .content {
-        background-color: #FCFCFC;
-    }
+page-catering {
 
     .header .header-ios {
         background: color($colors, primary);
@@ -13,23 +9,11 @@ page-home {
         text-align: center;
     }
 
-    .welcome-header {
-        text-align: center;
-    }
+    ion-segment {
+        height: 3rem;
+        margin: 0px;
+        position: fixed;
 
-    .welcome-header img {
-        display: block;
-        margin: auto;
-    }
-
-    .welcome-header h2 {
-        color: color($colors, primary);
-    }
-
-    .welcome-header h3 {
-        color: gray;
-        font-size: 1.5rem;
-        margin: 1em;
     }
 
     .content-md{
@@ -52,7 +36,7 @@ page-home {
         background-color: white;
     }
 
-    .about-text{
+    .overflow{
         overflow-wrap: break-word;
         white-space: normal;
         color: gray;
@@ -88,7 +72,7 @@ page-home {
 
         button {
             font-size: .75em;
-            width: 100%;
+            width: 100%;          
         }
     }
 
@@ -98,4 +82,3 @@ page-home {
         padding: 12px;
     }
 }
-

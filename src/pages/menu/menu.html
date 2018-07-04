@@ -23,19 +23,39 @@
           </ion-segment-button>
       </ion-segment>
   </div>
-
+  <br>
   <div [ngSwitch]='selectedTab'>
     <div *ngSwitchCase="'Beverages'" class="selected-menu-tab">
-        <ion-list *ngFor="let drink of allDrinks">
-            <ion-item>{{drink.name}}</ion-item>
-          </ion-list>
+        <ion-grid class="header-grid">
+            <ion-row>
+              <ion-col col-9>
+                <h6>Beverages</h6>
+              </ion-col>
+              <ion-col col-3>
+                <button ion-button (click)="showExtraInfo = !showExtraInfo">
+                  More Info
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <div class="list-item" *ngIf="showExtraInfo">
+                <p class="overflow">Served with herbed pita croutons and homemade dressing.</p>
+          </div>
+            <div *ngFor="let beverage of allSalads">
+                  <div class="list-item">
+                  <h5 (click)="beverage.clicked = !beverage.clicked">{{beverage.name}}</h5>
+                  <div *ngIf="beverage.clicked">
+                    <h6>{{beverage.price}}</h6>
+                    <p class="overflow">{{beverage.description}}</p>
+                  </div>
+            </div>
+        </div>
     </div>
-    <br>
     <div *ngSwitchCase="'Salads'" class="selected-menu-tab">
       <ion-grid class="header-grid">
         <ion-row>
           <ion-col col-9>
-            <h6>All Salads</h6>
+            <h6>Salads</h6>
           </ion-col>
           <ion-col col-3>
             <button ion-button (click)="showExtraInfo = !showExtraInfo">
@@ -66,7 +86,7 @@
       <ion-grid class="header-grid">
         <ion-row>
           <ion-col col-9>
-            <h6>All Sandwiches</h6>
+            <h6>Sandwiches</h6>
           </ion-col>
           <ion-col col-3>
             <button ion-button (click)="showExtraInfo = !showExtraInfo">
@@ -111,7 +131,7 @@
         <ion-grid class="header-grid">
           <ion-row>
             <ion-col col-9>
-              <h6>All Soups</h6>
+              <h6>Soups</h6>
             </ion-col>
             <ion-col col-3>
               <button ion-button (click)="showExtraInfo = !showExtraInfo">

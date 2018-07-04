@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Catering
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div ion-fixed style="width: 100%;">
+        <ion-segment [(ngModel)]='selectedTab'>
+            <ion-segment-button value='Combos' class="menu-tab" (click)="showExtraInfo = false">
+              Combos
+            </ion-segment-button>
+            <ion-segment-button value ='Salads' (click)="showExtraInfo = false">
+              Salads
+            </ion-segment-button>
+          </ion-segment>
+      </div>
+      <br>
+  <div [ngSwitch]='selectedTab'>
+    <div *ngSwitchCase="'Combos'" class="selected-menu-tab">
+        <ion-grid class="header-grid">
+            <ion-row>
+              <ion-col col-9>
+                <h6>Combos</h6>
+              </ion-col>
+              <ion-col col-3>
+                <button ion-button (click)="openWithSystemBrowser('https://www.ezcater.com/catering/pvt/terrazu-new-orleans?fcv=1')">
+                  Order Now
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <div class="list-item" *ngIf="showExtraInfo">
+                <p class="overflow">Served with herbed pita croutons and homemade dressing.</p>
+          </div>
+            <div *ngFor="let beverage of allSalads">
+                  <div class="list-item">
+                  <h5 (click)="beverage.clicked = !beverage.clicked">{{beverage.name}}</h5>
+                  <div *ngIf="beverage.clicked">
+                    <h6>{{beverage.price}}</h6>
+                    <p class="overflow">{{beverage.description}}</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</ion-content>
