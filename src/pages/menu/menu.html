@@ -9,14 +9,17 @@
 <ion-content>
   <div ion-fixed style="width: 100%;">
     <ion-segment [(ngModel)]='selectedTab'>
-        <ion-segment-button value='Beverages' class="menu-tab">
+        <ion-segment-button value='Beverages' class="menu-tab" (click)="showExtraInfo = false">
           Beverages
         </ion-segment-button>
-        <ion-segment-button value = 'Salads'>
+        <ion-segment-button value ='Salads' (click)="showExtraInfo = false">
           Salads
         </ion-segment-button>
-        <ion-segment-button value = 'Sandwiches'>
+        <ion-segment-button value ='Sandwiches' (click)="showExtraInfo = false">
           Sandwiches
+          </ion-segment-button>
+          <ion-segment-button value ='Soups' (click)="showExtraInfo = false">
+              Soups
           </ion-segment-button>
       </ion-segment>
   </div>
@@ -42,11 +45,15 @@
         </ion-row>
       </ion-grid>
       <div class="list-item" *ngIf="showExtraInfo">
-            <p class="overflow">Served with herbed pita croutons and homemade dressing</p>
+            <p class="overflow">Served with herbed pita croutons and homemade dressing.</p>
+            <p class="overflow"><strong>Our fresh house made dressings include:</strong>
+                tarragon vinaigrette, pepper jelly vinaigrette, lemon vinaigrette, 
+                sesame ginger vinaigrette, creamy blue cheese, buttermilk ranch, 
+                honey dijon and a simple balsamic vinaigrette.</p>
       </div>
         <div *ngFor="let salad of allSalads">
               <div class="list-item">
-              <h5 (click)="salad.clicked = !salad.clicked">{{salad.name | uppercase}}</h5>
+              <h5 (click)="salad.clicked = !salad.clicked">{{salad.name}}</h5>
               <div *ngIf="salad.clicked">
                 <h6>{{salad.price}}</h6>
                 <p class="overflow">{{salad.description}}</p>
@@ -69,19 +76,63 @@
         </ion-row>
       </ion-grid>
       <div class="list-item" *ngIf="showExtraInfo">
-            <p class="overflow">Served with herbed pita croutons and homemade dressing</p>
+            <p class="overflow">Served with Terrazu’s Sesame Ginger Coleslaw and Chips</p>
+            <h6>Deli Meats:</h6>
+            <ul class="overflow">
+              <li>Honey Smoked Turkey</li>
+              <li>Virginia Pit Ham</li>
+              <li>Medium Rare Roast Beef</li>
+              <li>Pastrami</li>
+              <li>Grilled Chicken Breast</li>
+              <li>Hummus</li>
+              <li>Chicken, Tuna, & Shrimp Salads</li>
+            </ul>
+            <h6>Deli Cheese:</h6>
+            <ul class="overflow">
+              <li>Aged Swiss</li>
+              <li>Sharp Cheddar</li>
+              <li>Fresh Mozzarella</li>
+              <li>Spicy Pimento Spread</li>
+              <li>Fontina</li>
+            </ul>
       </div>
-        <div *ngFor="let salad of allSalads">
+        <div *ngFor="let sandwich of allSandwiches">
               <div class="list-item">
-              <h5 (click)="salad.clicked = !salad.clicked">{{salad.name | uppercase}}</h5>
-              <div *ngIf="salad.clicked">
-                <h6>{{salad.price}}</h6>
-                <p class="overflow">{{salad.description}}</p>
+              <h5 (click)="sandwich.clicked = !sandwich.clicked">{{sandwich.name}}</h5>
+              <div *ngIf="sandwich.clicked">
+                <h6>{{sandwich.price}}</h6>
+                <p class="overflow">{{sandwich.description}}</p>
               </div>
+            </div>
+       </div>
+    </div>
+
+    <div *ngSwitchCase="'Soups'" class="selected-menu-tab">
+        <ion-grid class="header-grid">
+          <ion-row>
+            <ion-col col-9>
+              <h6>All Soups</h6>
+            </ion-col>
+            <ion-col col-3>
+              <button ion-button (click)="showExtraInfo = !showExtraInfo">
+                More Info
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="list-item" *ngIf="showExtraInfo">
+              <p class="overflow">Available in a cup or bowl.</p>
+              
         </div>
+          <div *ngFor="let soup of allSoups">
+                <div class="list-item">
+                <h5 (click)="soup.clicked = !soup.clicked">{{soup.name}}</h5>
+                <div *ngIf="soup.clicked">
+                  <h6>{{soup.price}}</h6>
+                  <p class="overflow">{{soup.description}}</p>
+                </div>
+          </div>
+      </div>
     </div>
   </div>
-
-
-</div>
 </ion-content>
