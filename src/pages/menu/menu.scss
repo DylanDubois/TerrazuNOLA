@@ -2,7 +2,6 @@ page-menu {
 
     .header .header-ios {
         background: color($colors, primary);
-        font-family: Verdana, Geneva, sans-serif;
     }
 
     .toolbar-title {
@@ -16,8 +15,9 @@ page-menu {
         color: purple;
     }
 
+
     .selected-menu-tab {
-        margin-top: 4.5rem;
+        margin-top: 1.5rem;
     }
 
     .segment-ios .segment-button {
@@ -32,13 +32,12 @@ page-menu {
 
         p {
             margin: 1em 0 1em 0;
-            font-family: Verdana, Geneva, sans-serif;
         }
     }
     h6 {
         margin: 0;
         color: color($colors, primary);
-        font-family: Verdana, Geneva, sans-serif;
+
     }
 
     .list-item {
@@ -48,9 +47,19 @@ page-menu {
         h5 {
             margin: .5em 0 .5em 0;
             font-weight: 500;
-            font-family: Verdana, Geneva, sans-serif;
-            
+            font-family: Verdana, Geneva, sans-serif;         
         }
         
+    }
+
+    .header-grid {
+        border-bottom: 0.55px solid color($colors, primary);
+        h6 {
+            font-size: 2em;
+        }
+
+        button {
+            font-size: .75em;
+        }
     }
 }

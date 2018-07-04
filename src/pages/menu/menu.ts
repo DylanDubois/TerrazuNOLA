@@ -11,7 +11,8 @@ export class MenuPage {
 
   }
 
-  selectedTab: string = 'Drinks';
+  selectedTab: string = 'Beverages';
+  showExtraInfo: boolean = false;
 
   allDrinks:any[] = [
     {name: 'Iced Coffee',
@@ -27,7 +28,7 @@ export class MenuPage {
     clicked: false
   },
   {
-    name: 'TERRAZU SHRIMP SALAD',
+    name: "TERRAZU's SHRIMP SALAD",
     description : 'Fresh bibb lettuce topped with spicy boiled shrimp, '+
     'hearts of palm, fresh diced tomato and avocado; served with our '+
     'tarragon vinaigrette dressing. (Eat Fit NOLA version served with 1.5oz dressing, no pita croutons)',
