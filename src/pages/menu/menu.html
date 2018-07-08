@@ -18,9 +18,6 @@
         <ion-segment-button value ='Sandwiches' (click)="showExtraInfo = false">
           Sandwiches
           </ion-segment-button>
-          <ion-segment-button value ='Soups' (click)="showExtraInfo = false">
-              Soups
-          </ion-segment-button>
       </ion-segment>
   </div>
   <br>
@@ -29,7 +26,7 @@
         <ion-grid class="header-grid">
             <ion-row>
               <ion-col col-9>
-                <h6>Beverages</h6>
+                <h6>Hot Drinks</h6>
               </ion-col>
               <ion-col col-3>
                 <button ion-button (click)="showExtraInfo = !showExtraInfo">
@@ -39,17 +36,58 @@
             </ion-row>
           </ion-grid>
           <div class="list-item" *ngIf="showExtraInfo">
-                <p class="overflow">Served with herbed pita croutons and homemade dressing.</p>
+                <p class="overflow"><strong>Add a flavor for $.60:</strong> Dark Chocolate, White Chocolate, 
+                Vanilla Hazelnut, Caramel, Irish Cream, Raspberry, Cinnamon Gingerbread, & Amaretto</p>
+                <p class="overflow"><strong>Sugar Free Flavors:</strong> Vanilla, Hazelnut, Caramel, & Chocolate</p>
+                <p class="overflow"><strong>Add Soymilk, Whipped Cream, or Flavorshot for $.60!</strong></p>
           </div>
-            <div *ngFor="let beverage of allSalads">
-                  <div class="list-item">
+            <div *ngFor="let beverage of allBeverages">
+                  <div *ngIf="beverage.type==='Hot'" class="list-item">
                   <h5 (click)="beverage.clicked = !beverage.clicked">{{beverage.name}}</h5>
                   <div *ngIf="beverage.clicked">
-                    <h6>{{beverage.price}}</h6>
+                    <h6>Sm: {{beverage.priceSmall}}&emsp;Med: {{beverage.priceMedium}}&emsp;Lg: {{beverage.priceLarge}}</h6>
                     <p class="overflow">{{beverage.description}}</p>
                   </div>
             </div>
         </div>
+        <ion-grid class="header-grid">
+          <ion-row>
+            <ion-col col-9>
+              <h6>Cold Drinks</h6>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="list-item" *ngIf="showExtraInfo">
+              <p class="overflow"></p>
+        </div>
+          <div *ngFor="let beverage of allBeverages">
+                <div *ngIf="beverage.type==='Cold'" class="list-item">
+                <h5 (click)="beverage.clicked = !beverage.clicked">{{beverage.name}}</h5>
+                <div *ngIf="beverage.clicked">
+                  <h6>Sm: {{beverage.priceSmall}}&emsp;Med: {{beverage.priceMedium}}&emsp;Lg: {{beverage.priceLarge}}</h6>
+                  <p class="overflow">{{beverage.description}}</p>
+                </div>
+          </div>
+      </div>
+      <ion-grid class="header-grid">
+        <ion-row>
+          <ion-col col-9>
+            <h6>Frozen Drinks</h6>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="list-item" *ngIf="showExtraInfo">
+            <p class="overflow"></p>
+      </div>
+        <div *ngFor="let beverage of allBeverages">
+              <div *ngIf="beverage.type==='Frozen'" class="list-item">
+              <h5 (click)="beverage.clicked = !beverage.clicked">{{beverage.name}}</h5>
+              <div *ngIf="beverage.clicked">
+                <h6>Sm: {{beverage.priceSmall}}&emsp;Med: {{beverage.priceMedium}}&emsp;Lg: {{beverage.priceLarge}}</h6>
+                <p class="overflow">{{beverage.description}}</p>
+              </div>
+        </div>
+    </div>
     </div>
     <div *ngSwitchCase="'Salads'" class="selected-menu-tab">
       <ion-grid class="header-grid">
@@ -127,32 +165,5 @@
        </div>
     </div>
 
-    <div *ngSwitchCase="'Soups'" class="selected-menu-tab">
-        <ion-grid class="header-grid">
-          <ion-row>
-            <ion-col col-9>
-              <h6>Soups</h6>
-            </ion-col>
-            <ion-col col-3>
-              <button ion-button (click)="showExtraInfo = !showExtraInfo">
-                More Info
-              </button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <div class="list-item" *ngIf="showExtraInfo">
-              <p class="overflow">Available in a cup or bowl.</p>
-              
-        </div>
-          <div *ngFor="let soup of allSoups">
-                <div class="list-item">
-                <h5 (click)="soup.clicked = !soup.clicked">{{soup.name}}</h5>
-                <div *ngIf="soup.clicked">
-                  <h6>{{soup.price}}</h6>
-                  <p class="overflow">{{soup.description}}</p>
-                </div>
-          </div>
-      </div>
-    </div>
   </div>
 </ion-content>

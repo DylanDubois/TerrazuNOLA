@@ -32,15 +32,12 @@
               </ion-col>
             </ion-row>
           </ion-grid>
-          <div class="list-item" *ngIf="showExtraInfo">
-                <p class="overflow">Served with herbed pita croutons and homemade dressing.</p>
-          </div>
-            <div *ngFor="let beverage of allSalads">
+            <div *ngFor="let combo of cateringCombos">
                   <div class="list-item">
-                  <h5 (click)="beverage.clicked = !beverage.clicked">{{beverage.name}}</h5>
-                  <div *ngIf="beverage.clicked">
-                    <h6>{{beverage.price}}</h6>
-                    <p class="overflow">{{beverage.description}}</p>
+                  <h5 (click)="combo.clicked = !combo.clicked">{{combo.name}}</h5>
+                  <div *ngIf="combo.clicked">
+                    <h6>{{combo.price}}</h6>
+                    <p class="overflow">{{combo.description}}</p>
                   </div>
             </div>
         </div>

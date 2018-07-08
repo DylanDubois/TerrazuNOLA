@@ -19,22 +19,190 @@ export class MenuPage {
      prices: ['2.50', '3.00', '3.50']}
   ];
 
-  allSoups: any[] = [
+  allBeverages: any[] = [
     {
-      name: 'Soup and Salad',
-      description: 'Today’s soup with your choice of any smaller salad or Terrazu’s sesame-ginger coleslaw.',
-      price: '',
+      name: 'Espresso',
+      description: '',
+      priceSmall: '$1.50',
+      priceMedium: '$1.85',
+      priceLarge: '$2.50',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Cappuccino',
+      description: '',
+      priceSmall: '$2.65',
+      priceMedium: '$3.20',
+      priceLarge: '$3.70',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Latte',
+      description: '',
+      priceSmall: '$2.70',
+      priceMedium: '$3.50',
+      priceLarge: '$4.15',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Breve Latte',
+      description: '',
+      priceSmall: '$3.35',
+      priceMedium: '$3.85',
+      priceLarge: '$4.60',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Mocha',
+      description: '',
+      priceSmall: '$3.15',
+      priceMedium: '$3.70',
+      priceLarge: '$4.35',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Americano',
+      description: '',
+      priceSmall: '$1.95',
+      priceMedium: '$2.25',
+      priceLarge: '$2.75',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Macchiato',
+      description: '',
+      priceSmall: '$2.55',
+      priceMedium: '$3.10',
+      priceLarge: '$3.55',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Chai Latte',
+      description: '',
+      priceSmall: '$3.25',
+      priceMedium: '$4.25',
+      priceLarge: '$5.25',
+      type: 'Hot',
+      clicked: false
+    },
+
+    {
+      name: 'Fresh Brewed Coffee',
+      description: '',
+      priceSmall: '$1.70',
+      priceMedium: '$2.10',
+      priceLarge: '$2.40',
+      type: 'Hot',
       clicked: false
     },
     {
-      name: 'Soup and Sandwich',
-      description: 'Today’s soup with a half of any sandwich.',
-      price: '',
+      name: 'Cafe Au Lait',
+      description: '',
+      priceSmall: '$2.15',
+      priceMedium: '$2.40',
+      priceLarge: '$2.85',
+      type: 'Hot',
       clicked: false
-    }
+    },
+    {
+      name: 'Hot Chocolate',
+      description: '',
+      priceSmall: '$2.50',
+      priceMedium: '$2.65',
+      priceLarge: '$2.85',
+      type: 'Hot',
+      clicked: false
+    },
+    {
+      name: 'Hot Tea',
+      description: 'Extra tea bag: $1.00',
+      priceSmall: '$1.80',
+      priceMedium: '',
+      priceLarge: '',
+      type: 'Hot',
+      clicked: false
+    },
+    
+    {
+      name: 'Iced Coffee',
+      description: '',
+      priceSmall: '$2.40',
+      priceMedium: '$2.75',
+      priceLarge: '$3.10',
+      type: 'Cold',
+      clicked: false
+    },
+    {
+      name: 'Iced Latte',
+      description: '',
+      priceSmall: '$2.85',
+      priceMedium: '$3.65',
+      priceLarge: '$4.15',
+      type: 'Cold',
+      clicked: false
+    },
+    {
+      name: 'Iced Mocha',
+      description: '',
+      priceSmall: '$3.15',
+      priceMedium: '$3.70',
+      priceLarge: '$4.25',
+      type: 'Cold',
+      clicked: false
+    },
+    {
+      name: 'Iced Chai',
+      description: '',
+      priceSmall: '$3.15',
+      priceMedium: '$3.70',
+      priceLarge: '$4.25',
+      type: 'Cold',
+      clicked: false
+    },
+    {
+      name: 'Iced Teas',
+      description: 'Regualar Black, Flavored Black, & Herbal Fruit Tea',
+      priceSmall: '$1.70',
+      priceMedium: '$2.00',
+      priceLarge: '$2.25',
+      type: 'Cold',
+      clicked: false
+    },
+
+    {
+      name: 'Granita',
+      description: '',
+      priceSmall: '$3.25',
+      priceMedium: '$3.65',
+      priceLarge: '$4.15',
+      type: 'Frozen',
+      clicked: false
+    },
 ];
 
-  allSalads: any[] = [{
+  allSalads: any[] = [
+    {
+      name: 'Soup and Salad',
+      description: 'Today’s soup with your choice of any smaller salad or Terrazu’s sesame-ginger coleslaw.\nAvailable in a cup or bowl.',
+      price: '',
+      clicked: false
+    },
+    
+    {
     name: 'Terrazu’s House Salad',
     description: 'Ripe beefsteak tomato, avocado, hearts of palm, cucumber,'+ 
     'celery, shredded Fontina cheese  and hardboiled egg with our house dressing,' +
@@ -107,6 +275,13 @@ export class MenuPage {
   }];
 
   allSandwiches: any[] = [
+    {
+      name: 'Soup and Sandwich',
+      description: 'Today’s soup with a half of any sandwich.\nAvailable in a cup or bowl.',
+      price: '',
+      clicked: false
+    },
+
     {name: 'The East Coast',
     description: 'Honey smoked turkey with Avocado, Brie cheese, house made orange cranberry relish with baby spinach & kale mix on TOASTED local  WildFlour multi grain bread.',
     price: '$11.00',

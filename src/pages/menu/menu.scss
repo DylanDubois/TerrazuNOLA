@@ -40,10 +40,7 @@ page-menu {
         overflow-wrap: break-word;
         white-space: normal;
         color: gray;
-
-        p {
-            margin: 1em 0 1em 0;
-        }
+        margin: .5em 0 1em 0;
     }
     h6 {
         margin: 0;
@@ -77,8 +74,7 @@ page-menu {
     }
 
     ul {
-        margin: 2px;
         list-style-type: none;
-        padding: 12px;
+        padding: 0 8px 0 8px;
     }
 }

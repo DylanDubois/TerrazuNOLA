@@ -30,7 +30,7 @@ page-home {
         position: absolute;
         margin-top: -4.5em;
         font-size: 3em;
-        text-shadow: 2px 2px black;
+        text-shadow: 3px 3px color($colors, primary);;
     }
 
     .welcome-header h3 {
