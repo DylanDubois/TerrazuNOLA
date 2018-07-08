@@ -20,16 +20,23 @@ page-home {
     .welcome-header img {
         display: block;
         margin: auto;
+        position: relative;
+        border-bottom: 2px solid color($colors, primary);
+        border-top: 2px solid color($colors, primary);
     }
 
     .welcome-header h2 {
-        color: color($colors, primary);
+        color: white;
+        position: absolute;
+        margin-top: -4.5em;
+        font-size: 3em;
+        text-shadow: 2px 2px black;
     }
 
     .welcome-header h3 {
-        color: gray;
-        font-size: 1.5rem;
-        margin: 1em;
+        color: color($colors, primary);
+        font-size: 1.75rem;
+        margin: .75em;
     }
 
     .content-md{
@@ -52,19 +59,40 @@ page-home {
         background-color: white;
     }
 
-    .about-text{
+    .info-text{
         overflow-wrap: break-word;
         white-space: normal;
         color: gray;
 
-        p {
-            margin: 1em 0 1em 0;
+        table {
+         text-align: left; 
+         padding: 0, 8px, 0, 8px;
+        }
+
+        th {
+         color: color($colors, primary); 
+        }
+
+        label {
+            font-size: 1.5em;
+            padding: 8px;
         }
     }
     h6 {
         margin: 0;
         color: color($colors, primary);
 
+    }
+
+    .home-footer {
+        text-align: center;
+        width: 100%;
+        button {
+            margin-top: 12px;
+            width: 20%;
+            font-size: 1.5em;
+            height: 10%;
+        }
     }
 
     .list-item {
