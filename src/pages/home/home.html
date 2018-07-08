@@ -6,19 +6,53 @@
 
 <ion-content>
   <div class="welcome-header">
-    <img src="../assets/imgs/terrazu_lobby.jpg"/>
+    <img src="/assets/imgs/terrazu_coffee.png"/>
     <h2>Welcome to Terrazu!</h2>
-    <h3>201 St. Charles Ave. (Lobby)</h3>
+    <h3>201 St. Charles Ave.</h3>
     <h3>(504) 287-0877</h3>
-    <p class="about-text">Terrazu Café, like our namesake, the Tarrazu region of Costa Rica, 
-      world famous for the exquisitely balanced coffee grown there, balances 
-      our gourmet coffee shop with our café serving creative and healthy sandwiches 
-      and salads to an ever increasing health conscience market.
-        Terrazu Café prepares a full range of the finest gourmet coffees, 
-        teas, world famous Davidovitch bagels, pastries and breads as well 
-        as exquisite desserts, all prepared by local roasters and bakeries.
-        Our menu of sandwiches and salads, all made fresh to order, 
-        are uniquely created using only the finest products, 
-        and procured from local sources whenever possible, with a strong emphasis on fresh and healthy.</p>
+    <div class="info-text">
+      <label><strong>Hours of Operation</strong></label>
+      <br>
+      <br>
+        <table style="width:83%; float: right;">
+          <tr>
+            <th>Monday</th>
+            <td>6:45AM - 4:30PM</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td>6:45AM - 4:30PM</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>6:45AM - 4:30PM</td>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>6:45AM - 4:30PM</td>
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td>6:45AM - 4:30PM</td>
+          </tr>
+          <tr>
+            <th>Saturday</th>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <th>Sunday</th>
+            <td>Closed</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  <br> <br>
+  <div class="home-footer">
+    <button ion-button>
+      <ion-icon name="logo-facebook" (click)="openWithSystemBrowser('https://www.facebook.com/Terrazu-89699444302/')"></ion-icon>
+    </button>
+    <button ion-button>
+      <ion-icon name="logo-instagram" (click)="openWithSystemBrowser('https://www.instagram.com/terrazucafe/')"></ion-icon>
+    </button>
   </div>
 </ion-content>
